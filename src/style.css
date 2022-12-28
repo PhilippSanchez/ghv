@@ -1,15 +1,12 @@
 body {
     background-color: rgb(236, 236, 236);
+
 }
 
-h1 {
-    color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 
 .MainNav {
     background-color: rgb(21, 21, 21);
-    font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
     text-align: center;
     display: flex;
@@ -22,6 +19,14 @@ h1 {
     
 }
 
+#landig h1{
+
+
+    font-family: rival-sans, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    height: 900px;
+}
 
 
 
