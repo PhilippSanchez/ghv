@@ -1,3 +1,6 @@
+*{
+    
+}
 body {
     background-color: rgb(13, 14, 20);
 }
@@ -10,5 +13,12 @@ h1 {
 .MainNav {
     background-color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
-    padding-top: 20px 0;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.MainNav a {
+    font-style: bold;
+    font-size: 15px;
 }
