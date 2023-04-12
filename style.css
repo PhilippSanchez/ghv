@@ -1,0 +1,309 @@
+/* Imported Fonts */
+
+/* Color Variablen */
+
+
+/* Body */
+
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 100 px repeat(5, 800px);
+
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+    font-size: 50px;
+}
+
+
+/* Navigation*/
+
+
+header {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 25px;
+
+}
+
+.navigation-wrapper {
+
+    background: rgb(2,0,36);
+    background: linear-gradient(65deg, rgb(32, 15, 68) 0%, rgb(15, 15, 96) 100%);
+
+    height: 50px;
+    width: 800px;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px 0 15px ;
+
+}
+
+.navigation-wrapper img {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.nav-links {
+    padding-right: 5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding-left: 5px;
+}
+
+.nav-links span{
+    position: relative;
+    visibility: hidden;
+    right: 10px;
+    transition: visibility 0.4s ease-out, right 0.4s ease-out;
+}
+
+.nav-links a:hover{
+    color: rgb(255, 104, 53);
+}
+
+.nav-links a:hover span{
+    visibility: visible;
+    right: 0;
+
+    transition: visibility 0.4s ease-out;
+}
+
+
+.nav-links a:active{
+    color: violet;
+}
+
+#mobileMenu {
+    display: none;
+}
+
+#burger-menu {
+    display: none;
+}
+
+
+@media screen and (max-width: 400px){
+    
+    .navigation-wrapper{
+        background: transparent;
+    }
+    .navigation-wrapper img{
+        position: relative;
+        right: 100px;
+    }
+    .nav-links {
+        display: none;
+    }
+    
+    #burger-menu {
+        display: inline-block;
+    }
+
+
+    /* GHV BURGER MENU */
+
+#ghv-burger-menu {
+    display: box;
+    position: relative;
+    left: 250px;
+    height: 40px;
+    width: 40px;
+    transform-origin: center;
+}
+
+#ghv-bar-1 {
+    position: relative;
+    top: 8px;
+    background-color: black;
+    height: 5px;
+    width: 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    transform-origin: center;
+    transition: all 0.6s ease-in-out;
+}
+
+#ghv-bar-2 {
+    position: relative;
+    top: 13px;  
+    background-color: black;
+    height: 5px;
+    width: 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    transform-origin: center;
+    transition: all 0.6s ease-in-out;
+}
+
+#ghv-bar-3 {
+    position: relative;
+    top: 18px;
+    background-color: black;
+    height: 5px;
+    width: 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    transform-origin: center;
+    transition: all 0.6s ease-in-out;
+}
+
+#ghv-burger-menu:hover #ghv-bar-1 {
+    background-color: rgb(179, 179, 179);
+    transform: rotate(-90deg) translateY(-200%) translateX(-50%)  scale(0.6, 1);
+}
+
+#ghv-burger-menu:hover #ghv-bar-2 {
+    background-color: rgb(179, 179, 179);
+    transform: rotate(-90deg) translateX(0%) translateX(-7%) scale(0.80, 1);
+}
+#ghv-burger-menu:hover #ghv-bar-3 {
+    background-color: rgb(252, 151, 63);
+    transform: rotate(-90deg) translateY(200%) translateX(35%);
+}
+
+#mobileMenu {
+    display: none;
+}
+
+    
+}
+/* Main */
+
+main {
+
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+}
+
+#lp-above-the-fold {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    height: 800px;
+}
+
+#above-the-fold-right {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+}
+
+#lp-call-to-action {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+}
+
+.line-up {
+    animation: 2s ani-line-up ease-out;
+}
+
+@keyframes ani-line-up {
+    0%{
+        opacity: 0;
+        transform: translateY(80%);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
+#lp-img-container {
+    float: right;
+    z-index: 0;
+}
+
+/* Die GHV */
+
+#lp-über-uns {
+
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    background-color: gainsboro;
+
+}
+
+
+/* Services */
+
+#lp-services {
+
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+}
+
+/* Kontakt */
+
+#lp-kontakt {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+
+
+/*Footer*/
+
+footer {
+
+    
+    background: rgb(2,0,36);
+    background: linear-gradient(65deg, rgb(32, 15, 68) 0%, rgb(15, 15, 96) 100%);
+
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 6;
+    grid-row-end: 7;
+
+    background-color:  gray;
+    border-radius: 25px 25px 0 0;
+    color: whitesmoke;
+    height: 150px;
+    padding: 50px;
+}
+
+footer a {
+    color: whitesmoke;
+    text-decoration: none;
+}
